@@ -22,15 +22,14 @@ The project is divided into two main parts:
 
 1. Clone the repository
    ```bash
-   git clone <repository-url>
-   cd Kazam-Task
+   git clone https://github.com/Sajid788/kazam-todo-Task.git
+   cd kazam-todo-Task
    ```
 
 2. Set up the backend
    ```bash
    cd backend
    npm install
-   # Configure your environment variables in .env file
    npm run dev
    ```
 
