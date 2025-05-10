@@ -79,3 +79,7 @@ A full-stack to-do list application built with Node.js, React, Redis, MongoDB, a
 - Redis connection is configured in `backend/config/redis.js`
 - MongoDB connection is configured in `backend/config/db.js`
 - MQTT connection is configured in `backend/config/mqtt.js` 
+
+## Screenshot
+![image](https://github.com/user-attachments/assets/75071c43-8669-4969-b3dd-b7badbf4b0f7)
+
