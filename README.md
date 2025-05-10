@@ -1,85 +1,56 @@
-# To-Do List Application
+# Kazam Task Management Application
 
 A full-stack to-do list application built with Node.js, React, Redis, MongoDB, and MQTT.
 
-## Features
+## Project Structure
 
-- Add tasks via MQTT topic `/add`
-- Add tasks via HTTP API
-- Store tasks in Redis cache (up to 50 items)
-- Automatically move tasks to MongoDB when Redis cache exceeds 50 items
-- Fetch all tasks through REST API
-- Responsive UI built with React and Tailwind CSS
+The project is divided into two main parts:
 
-## Tech Stack
+- **Frontend**: React application with Tailwind CSS for styling
+- **Backend**: Express.js API with MongoDB, Redis, and MQTT integration
 
-### Backend
-- Node.js
-- Express.js
-- Redis
+## Quick Start
+
+### Prerequisites
+
+- Node.js 
 - MongoDB
-- MQTT
+- Redis
+- MQTT Broker (e.g., Mosquitto)
 
-### Frontend
-- React.js
-- Tailwind CSS
-- Axios
+### Installation and Setup
 
-## Setup Instructions
-
-### Backend
-
-1. Navigate to the backend directory:
+1. Clone the repository
+   ```bash
+   git clone <repository-url>
+   cd Kazam-Task
    ```
+
+2. Set up the backend
+   ```bash
    cd backend
-   ```
-
-2. Install dependencies:
-   ```
    npm install
-   ```
-
-3. Start the server:
-   ```
+   # Configure your environment variables in .env file
    npm run dev
    ```
 
-### Frontend
-
-1. Navigate to the frontend directory:
-   ```
+3. Set up the frontend
+   ```bash
    cd frontend
-   ```
-
-2. Install dependencies:
-   ```
    npm install
-   ```
-
-3. Start the development server:
-   ```
    npm start
    ```
 
-## Usage
+4. Access the application at `http://localhost:3000`
 
-### Adding Tasks
+## Features
 
-- **Via UI**: Use the form in the frontend app to add tasks
-- **Via MQTT**: Publish a message to the `/add` topic on the MQTT broker (broker.emqx.io:1883)
-- **Via API**: Send a POST request to `http://localhost:5000/api/tasks` with JSON body: `{ "text": "Task content" }`
-
-### Fetching Tasks
-
-- **Via UI**: Tasks are automatically fetched and displayed in the frontend app
-- **Via API**: Send a GET request to `http://localhost:5000/api/tasks/fetchAllTasks`
-
-## Configuration
-
-- Redis connection is configured in `backend/config/redis.js`
-- MongoDB connection is configured in `backend/config/db.js`
-- MQTT connection is configured in `backend/config/mqtt.js` 
+- Create, read, update, and delete tasks
+- Real-time updates via MQTT
+- Data caching with Redis
+- Responsive UI built with React and Tailwind CSS
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/75071c43-8669-4969-b3dd-b7badbf4b0f7)
+![image](https://github.com/user-attachments/assets/6b314077-c5cb-46a7-b5a8-9548840983b2)
+
 
